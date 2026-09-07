@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["engines", "engineer", "endogenous", "computational-substrate", "okf-v0.2"]
 relations:
   - rel: "depends_on"
-    ref: "CLAUDE.md"
+    ref: "AGENTS.md"
 summary: "Engineering invariants, golden path libraries, promotion gates, and negative boundaries."
 ---
 
@@ -27,6 +27,8 @@ Last updated: 2026-09-07
 
 Use verified libraries instead of writing procedural custom code:
 
+- **`xbbg` (Market Data Feeds):** Preferred programmatic Bloomberg connector for fetching reference, market, and intraday data into Polars/pandas. Prefer `xbbg` over low-level, procedural `blpapi` calls.
+- **`OpenSourceRisk` / `open-source-risk-engine` (ORE):** Preferred industry-standard framework for financial instrument valuation, curve construction, sensitivity analytics, and collateral/margin risk modeling. Prefer high-level ORE interfaces over raw, unparameterized `QuantLib` bindings.
 - **`pandera[polars]` (Ingress Contracts):** Enforce strict schemas on all raw data streaming through `connectors/` before passing to solvers or research.
 - **`pydantic` (Data & Rule Modeling):** Model trade tickets, portfolio limits, and financing terms with declarative validators.
 - **`typer` + `rich` (Operational CLIs):** Build typed PowerShell commands and styled output tables for `tasks.ps1`.
@@ -59,5 +61,7 @@ Use verified libraries instead of writing procedural custom code:
 
 ## What Bad Looks Like
 - 60/30/10 Violation: Putting heuristic LLM logic or text reasoning inside pricing or risk solvers.
+- Writing boilerplate, manual event-loop `blpapi` code instead of using `xbbg`.
+- Hand-crafting custom valuation models via low-level `QuantLib` primitives instead of leveraging `OpenSourceRisk` (ORE).
 - Building enterprise web authentication or CORS layers for internal desktop tools.
 - Importing unverified code from `lab/` into `engines/`.

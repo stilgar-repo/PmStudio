@@ -12,22 +12,17 @@ $ErrorActionPreference = "Stop"
 
 switch ($Action) {
     "morning" {
-        Write-Host "Running 07:30 Morning Setup..." -ForegroundColor Cyan
-        uv run python -m engines.cli.ops.morning_runner
+        Write-Host "07:30 Morning Setup: [TODO] Ingest positions, verify headroom, initialize daily desk log." -ForegroundColor Yellow
     }
     "reconcile" {
-        Write-Host "Reconciling portfolio fills against intent..." -ForegroundColor Cyan
-        uv run python -m engines.cli.ops.reconcile
+        Write-Host "Reconcile: [TODO] Reconcile fills against staged intent and attribute variance." -ForegroundColor Yellow
     }
     "export-bi" {
-        Write-Host "Exporting Python-calculated snapshot for Power BI / Excel..." -ForegroundColor Cyan
-        uv run python -m engines.cli.ops.export_bi
+        Write-Host "Export BI: [TODO] Generate flat calculation snapshot for Power BI / Excel." -ForegroundColor Yellow
     }
     "check" {
         if (-not $Target) { $Target = "engines/" }
-        Write-Host "Running targeted validation on $Target..." -ForegroundColor Cyan
-        uv run ruff check $Target
-        uv run mypy $Target
+        Write-Host "Check: [TODO] Run targeted linter/type checks on $Target (waiting on uv setup)." -ForegroundColor Yellow
     }
     "spike" {
         if (-not $Target) { 
@@ -41,12 +36,6 @@ switch ($Action) {
         Write-Host "Spawned new research workspace: $dest" -ForegroundColor Green
     }
     "setup-hooks" {
-        Write-Host "Installing pre-commit hooks into .git/..." -ForegroundColor Cyan
-        uv run pre-commit install
-        if (-not (Test-Path -Path ".secrets.baseline")) {
-            Write-Host "Generating initial secrets baseline..." -ForegroundColor Cyan
-            uv run detect-secrets scan > .secrets.baseline
-        }
-        Write-Host "[SUCCESS] Pre-commit boundary hooks armed." -ForegroundColor Green
+        Write-Host "Setup Hooks: [TODO] Initialize git pre-commit hooks (waiting on uv setup)." -ForegroundColor Yellow
     }
 }

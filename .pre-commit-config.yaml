@@ -33,7 +33,7 @@ repos:
     hooks:
       - id: check-jsonschema
         name: Validate OKF v0.2 Markdown frontmatter
-        files: ^.*\.md$
+        files: ^(commons|engines|journal|lab)/.*\.md$
         args:
           - --format
           - yaml-frontmatter

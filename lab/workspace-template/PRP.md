@@ -27,6 +27,6 @@ summary: "Empirical hypothesis protocol, risk bounds, target metrics, and falsif
 - Statistical Falsification Trigger (e.g., half-life > N days, basis widening > X bps):
 
 ## 3. Computational Blueprint
-- Upstream Connectors: `engines/connectors/`
-- Applied Substrate Math: `engines/quant/`
+- Upstream Connectors: `engines/connectors/` (using `xbbg` for Bloomberg feeds)
+- Applied Substrate Math: `engines/quant/` (using `OpenSourceRisk` / pure Polars)
 - Execution Script: `run.py`

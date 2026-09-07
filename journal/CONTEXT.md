@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["journal", "pm", "endogenous", "fiduciary-mandate", "okf-v0.2"]
 relations:
   - rel: "depends_on"
-    ref: "CLAUDE.md"
+    ref: "AGENTS.md"
 summary: "Operating charter, fiduciary mandate limits, and daily desk workflow for the Portfolio Manager."
 ---
 

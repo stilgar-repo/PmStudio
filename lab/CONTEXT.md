@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["lab", "researcher", "exogenous", "empirical-research", "okf-v0.2"]
 relations:
   - rel: "depends_on"
-    ref: "CLAUDE.md"
+    ref: "AGENTS.md"
 summary: "Operating charter, inquiry state machine, and empirical testing protocol for the Quant Researcher."
 ---
 
@@ -30,7 +30,7 @@ Crash-test quantitative hypotheses. Formulate falsifiable trade logic, pull cont
 1. **Scaffold:** Run `.\tasks.ps1 spike <name>`. Generates `lab/wip_<name>/` from `workspace-template/`.
 2. **Specify:** Complete `PRP.md` with explicit quantitative falsification criteria and risk limits.
 3. **Test:** Write `run.py` consuming data through `engines/connectors/`. Run via `uv run python run.py`.
-4. **Audit:** Record realized Sharpe, drawdown, and financing drag in `findings.md`. Mark verdict.
+4. **Audit:** Record realized Sharpe, drawdown, and financing drag in `FINDINGS.md`. Mark verdict.
 5. **Freeze:** Rename container prefix to `done_[slug]/` or `dead_[slug]/`. Never modify a frozen directory.
 
 ## Active Research Workspaces

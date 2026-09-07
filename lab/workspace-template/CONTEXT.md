@@ -21,7 +21,7 @@ summary: "Local operating context and rules for this empirical research workspac
 ## Workspace Invariants
 - Execution Script: `run.py`
 - Hypothesis Protocol: `PRP.md`
-- Audit & Verdict: `findings.md`
+- Audit & Verdict: `FINDINGS.md`
 - Data Ingress: Directly via `engines/connectors/` into in-memory Polars DataFrames.
 - Artifact Destination: In-memory or terminal `output.parquet`.
 

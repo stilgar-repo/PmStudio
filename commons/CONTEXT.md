@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["commons", "strategist", "exogenous", "market-structure", "okf-v0.2"]
 relations:
   - rel: "depends_on"
-    ref: "CLAUDE.md"
+    ref: "AGENTS.md"
 summary: "Operating charter and negative boundary for the Desk Strategist mapping exogenous market structure."
 ---
 

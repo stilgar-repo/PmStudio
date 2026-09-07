@@ -10,7 +10,7 @@ Every markdown file must begin with an OKF v0.2 frontmatter block (`okf_version:
 - Python: 3.14 via `uv` | VCS: Azure DevOps Git (conventional commits)
 - Local Gates: `pre-commit` (Ruff, secret detection, OKF frontmatter checks)
 - Type Checking: `uv run mypy <path>` (strict) | Tests: `uv run pytest <path>` (targeted only)
-- Feeds & Storage: Bloomberg API (`localhost:8194`), Snowflake CLI (`snow`)
+- Feeds & Storage: Bloomberg API via `xbbg` / `blpapi` (`localhost:8194`), Snowflake CLI (`snow`), OpenSourceRisk (ORE) engine
 
 ## Root Routing
 

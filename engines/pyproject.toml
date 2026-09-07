@@ -18,6 +18,9 @@ dependencies = [
     "xlsxwriter>=3.2.0",
     "openpyxl>=3.1.5",
     "blpapi>=3.24.0",
+    "xbbg>=0.7.7",
+    "QuantLib>=1.35",
+    "open-source-risk-engine>=1.8.12",
 ]
 
 [project.optional-dependencies]
@@ -51,6 +54,10 @@ disallow_untyped_defs = true
 [[tool.mypy.overrides]]
 module = [
     "blpapi.*",
+    "xbbg.*",
+    "QuantLib.*",
+    "ORE.*",
+    "open_source_risk_engine.*",
     "openpyxl.*",
     "xlsxwriter.*",
     "pytest_regressions.*"
