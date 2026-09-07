@@ -1,0 +1,26 @@
+# Python Runtime & Virtual Environments
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Testing, Linting & Type Checking
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Ad-hoc Files & Large Binaries
+lab/scratch.py
+*.parquet
+*.feather
+*.ipc
+*.h5
+
+# Secrets & Tool Specific
+.secrets.baseline
+.env
+.DS_Store
+Thumbs.db
