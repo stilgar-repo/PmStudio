@@ -1,6 +1,6 @@
 """Bloomberg Desktop API connector leveraging xbbg and Polars.
 
-Provides typed reference, historical, and chain data queries with
+Provides typed reference, historical, BQL, and chain data queries with
 automatic conversion to Polars DataFrames.
 """
 
@@ -96,6 +96,30 @@ def get_historical_data(
         end_date=str(end_date) if end_date is not None else None,
         **kwargs,
     )
+    df = pl.from_arrow(res.to_native())
+    if isinstance(df, pl.Series):
+        return df.to_frame()
+    return df
+
+
+def query_bql(expression: str) -> pl.DataFrame:
+    """Execute a Bloomberg Query Language (BQL) query and return a Polars DataFrame.
+
+    Parameters
+    ----------
+    expression : str
+        Bloomberg Query Language expression string.
+        Examples:
+            "get(px_last) for(['AAPL US Equity'])"
+            "get(px_last, pe_ratio) for(members('SPX Index')) with(pe_ratio > 25)"
+            "get(id_isin, weights) for(holdings('SPY US Equity'))"
+
+    Returns
+    -------
+    pl.DataFrame
+        Polars DataFrame containing the resulting BQL dataset.
+    """
+    res = blp.bql(expression)
     df = pl.from_arrow(res.to_native())
     if isinstance(df, pl.Series):
         return df.to_frame()
