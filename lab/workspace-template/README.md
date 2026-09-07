@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["template", "research", "inquiry", "okf-v0.2"]
 relations:
   - rel: "depends_on"
-    ref: "lab/CONTEXT.md"
+    ref: "lab/README.md"
 summary: "Local operating context and rules for this empirical research workspace."
 ---
 

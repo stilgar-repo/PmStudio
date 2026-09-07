@@ -66,18 +66,18 @@ Each quadrant maps directly to an operational directory, governed by a specializ
 
 | Quadrant | Directory | Persona | Orientation | Core Mission & Invariants |
 | :--- | :--- | :--- | :--- | :--- |
-| **I** | [`commons/`](file:///C:/Users/Eric/PmStudio/commons/CONTEXT.md) | **The Desk Strategist** | *Exogenous × Structural* | Ingests institutional plumbing, clearing mechanics, exchange rulebooks, and dealer haircut matrices. Scribes analytical proofs into dense, structured notes without speculative forecasts or narrative rhetoric. |
-| **II** | [`engines/`](file:///C:/Users/Eric/PmStudio/engines/CONTEXT.md) | **The Software Engineer** | *Endogenous × Structural* | The computational substrate and single source of financial truth. Builds pure, zero-I/O mathematical solvers (`quant/`, `risk/`), strict data ingress contracts (`pandera`), and BI export snapshots. Strict static typing (`mypy`). |
-| **III** | [`lab/`](file:///C:/Users/Eric/PmStudio/lab/CONTEXT.md) | **The Quant Researcher** | *Exogenous × Dynamic* | Formulates, tests, and aggressively falsifies quantitative anomalies and relative-value (RV) spikes in disposable research workspaces (`lab/wip_*`). Freezes inquiries to `done_*` or `dead_*`. Never imports into `engines/`. |
-| **IV** | [`journal/`](file:///C:/Users/Eric/PmStudio/journal/CONTEXT.md) | **The Portfolio Manager** | *Endogenous × Dynamic* | Governs the capital risk envelope, monitors fiduciary mandate headroom (`mandate.md`), stages trade execution tickets (Pydantic/Jinja2), and logs desk reality during morning setup and evening close. |
+| **I** | [`commons/`](file:///C:/Users/Eric/PmStudio/commons/README.md) | **The Desk Strategist** | *Exogenous × Structural* | Ingests institutional plumbing, clearing mechanics, exchange rulebooks, and dealer haircut matrices. Scribes analytical proofs into dense, structured notes without speculative forecasts or narrative rhetoric. |
+| **II** | [`engines/`](file:///C:/Users/Eric/PmStudio/engines/README.md) | **The Software Engineer** | *Endogenous × Structural* | The computational substrate and single source of financial truth. Builds pure, zero-I/O mathematical solvers (`quant/`, `risk/`), strict data ingress contracts (`pandera`), and BI export snapshots. Strict static typing (`mypy`). |
+| **III** | [`lab/`](file:///C:/Users/Eric/PmStudio/lab/README.md) | **The Quant Researcher** | *Exogenous × Dynamic* | Formulates, tests, and aggressively falsifies quantitative anomalies and relative-value (RV) spikes in disposable research workspaces (`lab/wip_*`). Freezes inquiries to `done_*` or `dead_*`. Never imports into `engines/`. |
+| **IV** | [`journal/`](file:///C:/Users/Eric/PmStudio/journal/README.md) | **The Portfolio Manager** | *Endogenous × Dynamic* | Governs the capital risk envelope, monitors fiduciary mandate headroom (`mandate.md`), stages trade execution tickets (Pydantic/Jinja2), and logs desk reality during morning setup and evening close. |
 
 ---
 
 ## Core Invariants
 
 - **State vs. Code:** State lives exclusively in Snowflake; code and analytical artifacts live in Git. Local files must never persist portfolio state.
-- **Zero-I/O Computational Substrate:** Mathematical and risk functions in [`engines/`](file:///C:/Users/Eric/PmStudio/engines/CONTEXT.md) are strictly pure (zero network, zero disk, zero database I/O).
-- **Promotion Gate:** Disposable exploratory code in [`lab/`](file:///C:/Users/Eric/PmStudio/lab/CONTEXT.md) never touches production. Validated mathematical logic must be sanitized, strictly typed, and verified via `pytest-regressions` ($|\Delta| \le 10^{-8}$) before promotion into [`engines/`](file:///C:/Users/Eric/PmStudio/engines/CONTEXT.md).
+- **Zero-I/O Computational Substrate:** Mathematical and risk functions in [`engines/`](file:///C:/Users/Eric/PmStudio/engines/README.md) are strictly pure (zero network, zero disk, zero database I/O).
+- **Promotion Gate:** Disposable exploratory code in [`lab/`](file:///C:/Users/Eric/PmStudio/lab/README.md) never touches production. Validated mathematical logic must be sanitized, strictly typed, and verified via `pytest-regressions` ($|\Delta| \le 10^{-8}$) before promotion into [`engines/`](file:///C:/Users/Eric/PmStudio/engines/README.md).
 - **Display-Only Downstream Tools:** Presentation layers (Power BI, Excel) are display-only. No financial formulas or risk metrics are calculated in DAX or spreadsheets; all metrics derive deterministically in Python.
 - **Strict OKF v0.2 Standard:** Every Markdown document adheres to the OKF v0.2 frontmatter schema (`.okf.schema.json`) with bidirectional relational graphing.
 

@@ -36,7 +36,7 @@ Act as a token-efficient scribe of structural truth. Ingest primary regulatory f
 
 | Topic / Sector | Location | Read |
 | :--- | :--- | :--- |
-| *(Spawn new workspaces dynamically)* | `commons/<topic>/` | `CONTEXT.md` |
+| *(Spawn new workspaces dynamically)* | `commons/<topic>/` | `README.md` |
 
 ## What Good Looks Like
 - Structural parameters extracted directly from source text (e.g., haircut schedules, mandatory clearing thresholds).

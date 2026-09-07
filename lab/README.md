@@ -37,8 +37,8 @@ Crash-test quantitative hypotheses. Formulate falsifiable trade logic, pull cont
 
 | Inquiry / Project | Location | Status | Read |
 | :--- | :--- | :--- | :--- |
-| Scaffolding Template | `lab/workspace-template/` | Template | `CONTEXT.md` + `PRP.md` |
-| *(Spawned spikes appear here)* | `lab/wip_<name>/` | `wip` | `CONTEXT.md` |
+| Scaffolding Template | `lab/workspace-template/` | Template | `README.md` + `PRP.md` |
+| *(Spawned spikes appear here)* | `lab/wip_<name>/` | `wip` | `README.md` |
 
 ## What Good Looks Like
 - Hypotheses with quantitative stop-outs and invalidation bounds (e.g., "Sharpe > 1.3 after dealer haircut drag; stop-out at -2.5 sigma").

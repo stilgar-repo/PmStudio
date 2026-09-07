@@ -36,6 +36,7 @@ dev = [
 
 [tool.uv]
 python-preference = "only-system"
+extra-index-url = ["https://blpapi.bloomberg.com/repository/releases/python/simple/"]
 
 [tool.ruff]
 line-length = 100

@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["research", "hypothesis", "empirical-test"]
 relations:
   - rel: "depends_on"
-    ref: "CONTEXT.md"
+    ref: "README.md"
 summary: "Empirical hypothesis protocol, risk bounds, target metrics, and falsification triggers."
 ---
 

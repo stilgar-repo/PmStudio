@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["journal", "entries", "daily-log", "okf-v0.2"]
 relations:
   - rel: "depends_on"
-    ref: "journal/CONTEXT.md"
+    ref: "journal/README.md"
 summary: "Operating protocol for recording daily desk setup, intraday risk headroom, and operational logs."
 ---
 

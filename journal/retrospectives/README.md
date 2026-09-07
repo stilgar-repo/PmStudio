@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["journal", "retrospectives", "post-mortem", "okf-v0.2"]
 relations:
   - rel: "depends_on"
-    ref: "journal/CONTEXT.md"
+    ref: "journal/README.md"
 summary: "Protocol for trade post-mortems, attribution audits, and mandate compliance reviews."
 ---
 

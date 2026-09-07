@@ -35,8 +35,8 @@ Govern the capital risk envelope. Ensure portfolio exposures stay strictly withi
 
 | Operational Area | Location | Read |
 | :--- | :--- | :--- |
-| Daily Logs & Entries | `journal/entries/` | `CONTEXT.md` |
-| Trade Retrospectives | `journal/retrospectives/` | `CONTEXT.md` |
+| Daily Logs & Entries | `journal/entries/` | `README.md` |
+| Trade Retrospectives | `journal/retrospectives/` | `README.md` |
 
 ## What Good Looks Like
 - Fiduciary headroom quantified in exact units (net/gross limits, bucketed sensitivities) relative to mandate thresholds.

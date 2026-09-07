@@ -52,7 +52,7 @@ Use verified libraries instead of writing procedural custom code:
 
 | Package / Domain | Location | Read |
 | :--- | :--- | :--- |
-| *(Spawn packages dynamically)* | `engines/<package>/` | `CONTEXT.md` |
+| *(Spawn packages dynamically)* | `engines/<package>/` | `README.md` |
 
 ## What Good Looks Like
 - 100% statically typed, zero-I/O mathematical functions.

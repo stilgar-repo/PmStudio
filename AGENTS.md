@@ -16,10 +16,10 @@ Every markdown file must begin with an OKF v0.2 frontmatter block (`okf_version:
 
 | Task | Go to | Read |
 | :--- | :--- | :--- |
-| Portfolio setup, risk audit, staging | /journal | CONTEXT.md + mandate.md |
-| Quantitative research or RV spike | /lab | CONTEXT.md + workspace-template/PRP.md |
-| Market structure, reg rules, proofs | /commons | CONTEXT.md |
-| Pure math, connectors, BI exports | /engines | CONTEXT.md + pyproject.toml |
+| Portfolio setup, risk audit, staging | /journal | README.md + mandate.md |
+| Quantitative research or RV spike | /lab | README.md + workspace-template/PRP.md |
+| Market structure, reg rules, proofs | /commons | README.md |
+| Pure math, connectors, BI exports | /engines | README.md + pyproject.toml |
 
 ## Primary Tasks (PowerShell 5.1)
 
@@ -36,3 +36,7 @@ Every markdown file must begin with an OKF v0.2 frontmatter block (`okf_version:
 - State lives only in Snowflake; code lives in Git. Never persist portfolio state in local files.
 - Math functions in `engines/` are pure and zero-I/O; code in `engines/` never imports from `lab/`.
 - Downstream tools (Power BI, Excel) are display-only; all metrics derive in Python.
+
+## Folder-Level Context
+
+Each major folder can have its own README.md file explaining what is inside and why to prevent bloating the root AGENTS.md.

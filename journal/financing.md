@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["financing", "repo", "haircuts", "prime-broker"]
 relations:
   - rel: "depends_on"
-    ref: "journal/CONTEXT.md"
+    ref: "journal/README.md"
 summary: "Active counterparty credit terms, baseline repo haircuts, and facility capacity limits."
 ---
 

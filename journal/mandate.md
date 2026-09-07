@@ -9,7 +9,7 @@ updated: 2026-09-07
 tags: ["governance", "mandate", "risk-limits", "covenants"]
 relations:
   - rel: "depends_on"
-    ref: "journal/CONTEXT.md"
+    ref: "journal/README.md"
 summary: "Constitutional risk envelope, maximum leverage, factor constraints, and capital drawdown stop-outs."
 ---
 
