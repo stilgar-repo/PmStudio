@@ -20,10 +20,6 @@ switch ($Action) {
     "export-bi" {
         Write-Host "Export BI: [TODO] Generate flat calculation snapshot for Power BI / Excel." -ForegroundColor Yellow
     }
-    "check" {
-        if (-not $Target) { $Target = "engines/" }
-        Write-Host "Check: [TODO] Run targeted linter/type checks on $Target (waiting on uv setup)." -ForegroundColor Yellow
-    }
     "spike" {
         if (-not $Target) { 
             throw "Specify research inquiry name. Usage: .\tasks.ps1 spike <inquiry_name>" 

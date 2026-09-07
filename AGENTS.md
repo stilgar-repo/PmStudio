@@ -7,10 +7,10 @@ Every markdown file must begin with an OKF v0.2 frontmatter block (`okf_version:
 ## Environment
 
 - OS: Windows 11 | Shell: Windows PowerShell 5.1 (`$env:VAR`, no `&&`)
-- Python: 3.14 via `uv` | VCS: Azure DevOps Git (conventional commits)
+- Python: 3.14 via `uv` (use `--project engines` for workspace Python execution) | VCS: Azure DevOps Git (conventional commits)
 - Local Gates: `pre-commit` (Ruff, secret detection, OKF frontmatter checks)
-- Type Checking: `uv run mypy <path>` (strict) | Tests: `uv run pytest <path>` (targeted only)
-- Feeds & Storage: Bloomberg API via `xbbg` / `blpapi` (`localhost:8194`), Snowflake CLI (`snow`), OpenSourceRisk (ORE) engine
+- Type Checking: `uv run --project engines mypy <path>` (strict) | Tests: `uv run --project engines pytest <path>` (targeted only)
+- Feeds & Storage: Bloomberg using `engines.connectors.bloomberg`, Snowflake CLI (`snow`), OpenSourceRisk (ORE) engine
 
 ## Root Routing
 
@@ -27,7 +27,6 @@ Every markdown file must begin with an OKF v0.2 frontmatter block (`okf_version:
 | :--- | :--- |
 | Morning desk setup | `.\tasks.ps1 morning` |
 | Export BI flat snapshot | `.\tasks.ps1 export-bi` |
-| Run targeted code checks | `.\tasks.ps1 check <path>` |
 | Scaffold research spike | `.\tasks.ps1 spike <name>` |
 | Initialize git pre-commit hooks | `.\tasks.ps1 setup-hooks` |
 

@@ -27,7 +27,7 @@ Last updated: 2026-09-07
 
 Use verified libraries instead of writing procedural custom code:
 
-- **`xbbg` (Market Data Feeds):** Preferred programmatic Bloomberg connector for fetching reference, market, and intraday data into Polars/pandas. Prefer `xbbg` over low-level, procedural `blpapi` calls.
+- **`xbbg` (Market Data Feeds):** Preferred programmatic Bloomberg connector for fetching reference, market, and intraday data into Polars/pandas via `engines.connectors.bloomberg` (`query_bql`, `get_reference_data`, `get_historical_data`). Never import or construct low-level `blpapi` event loops or search for a standalone `bql` module.
 - **`OpenSourceRisk` / `open-source-risk-engine` (ORE):** Preferred industry-standard framework for financial instrument valuation, curve construction, sensitivity analytics, and collateral/margin risk modeling. Prefer high-level ORE interfaces over raw, unparameterized `QuantLib` bindings.
 - **`pandera[polars]` (Ingress Contracts):** Enforce strict schemas on all raw data streaming through `connectors/` before passing to solvers or research.
 - **`pydantic` (Data & Rule Modeling):** Model trade tickets, portfolio limits, and financing terms with declarative validators.
@@ -37,6 +37,7 @@ Use verified libraries instead of writing procedural custom code:
 - **`hypothesis` (Property Fuzzing):** Fuzz numerical solvers against degenerate mathematical states (zero vol, inverted curves, negative yields).
 
 ## Engineering Invariants
+- **Python Scripts as Execution Golden Path:** Python scripts executed via `uv run --project engines python <script>` are the sole golden path for executing or interacting with `engines`. Avoid running multi-line inline Python code (`python -c "..."`) through PowerShell to avoid quoting collisions and syntax errors.
 - **Substrate Zero-I/O Purity:** Functions in `quant/` and `risk/` are pure transformations on in-memory Polars DataFrames or NumPy arrays. Zero disk, network, or database I/O.
 - **Single Source of Truth for BI:** All financial math originates here. Expose pre-calculated snapshots via `export_bi.py` for Power BI and Excel.
 - **Strict Typing:** All code must pass `uv run mypy engines/` in strict mode with zero errors.
